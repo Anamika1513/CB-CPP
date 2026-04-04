@@ -1,23 +1,32 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int main(){
-    int n;    // no of items
-    cin>>n;
+int main() {
+	int n;
+	cin>>n;
 
-    int arr[n];    // price of items
-    for(int i=0 ; i<n ; i++){
-        cin>>arr[i];
-    }
-    
-    int q;     // no of queries
-    cin>>q;
+	int price[n];
+	for(int i=0 ; i<n ; i++) cin>>price[i];
 
-    while(q--){
-        int a , k;   // a=units of money , k=kinds of item
-        cin>>a>>k;
+	int q;   // no of queries
+	cin>>q;
 
-        
-    }
-    return 0;
+	while(q--){
+		int a , k;
+		cin>>a>>k;
+
+		int count = 0 ;
+
+	// find each price
+	for(int i=0 ; i<n ; i++){
+		if(a%price[i]==0){
+			count++;
+		}
+	}
+
+	if(count>=k) cout<<"Yes"<<endl;
+	else cout<<"No"<<endl;
+
+	}
+	return 0;
 }

@@ -2,23 +2,26 @@
 using namespace std;
 
 int main(){
+	int n;
+	cin>>n;
 
-    int n ;
-    cin>>n;
-    int arr[n];
-    int j = n , i=1;
+	int arr[n];
+	//take the input
+	for(int i=0 ; i<n ; i++){
+		cin>>arr[i];
+	}
 
-    for(int i=0 ; i<n ; i++){
-        cin>>arr[i];
-        while(i<j){
-            swap(arr[i],arr[j]);
-            j--;
-        }
-    }
+	//inverse the array
+	int inv[n];
+	for(int i=0 ; i<n ; i++){
+		inv[arr[i]] = i;
+	}
 
-    for(int i=0 ; i<n ;i++){
-        cout<<arr[i]<<" ";
-    }
-    
-    return 0;
+	//print the inverse of array
+	for(int i=0 ; i<n ; i++){
+		cout<<inv[i]<<" ";
+	}
+
+	return 0;
+	
 }

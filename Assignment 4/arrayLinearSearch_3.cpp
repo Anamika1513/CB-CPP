@@ -2,19 +2,28 @@
 using namespace std;
 
 int main(){
-    int n ;
-    cin>>n;
-    int arr[n];
-    for(int i=0 ;i<n ; i++){
-        cin>>arr[i];
-    }
-    int srch;
-    cin>>srch;
+	int n ;
+	cin>>n;
 
-    for(int i=0 ; i<n ; i++){
-        if(arr[i]==srch)
-            cout<<i;
-    }
-    
-    return 0;
+	int arr[n];
+	for(int i=0 ; i<n ; i++){
+		cin>>arr[i];
+	}
+
+	int m;
+	cin>>m;
+
+	int index = -1;	
+	for(int i=0 ; i<n ; i++){
+		if(arr[i]==m) {
+			index = i;
+			break;
+		}
+	}
+
+	cout<<index;
+
+
+
+	return 0;
 }
